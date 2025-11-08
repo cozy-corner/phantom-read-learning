@@ -134,12 +134,14 @@ SELECT * FROM ufo_sightings WHERE shape = 'unknown';
 **結果: 0行（空の結果）**
 
 ```sql
--- ターミナル2でINSERT
+-- ターミナル2
 BEGIN;
 INSERT INTO ufo_sightings (sighting_date, location, shape, color, duration_minutes, witness_count, credibility_score)
 VALUES ('2024-05-01', 'Denver, Colorado', 'unknown', 'flickering', 2, 1, 0.30);
 COMMIT;
+```
 
+```sql
 -- ターミナル1で再実行
 SELECT * FROM ufo_sightings WHERE shape = 'unknown';
 ```
@@ -170,12 +172,14 @@ SELECT * FROM ufo_sightings WHERE shape = 'triangle';
 ```
 
 ```sql
--- ターミナル2でINSERT
+-- ターミナル2
 BEGIN;
 INSERT INTO ufo_sightings (sighting_date, location, shape, color, duration_minutes, witness_count, credibility_score)
 VALUES ('2024-05-15', 'Chicago, Illinois', 'triangle', 'dark-gray', 10, 4, 0.67);
 COMMIT;
+```
 
+```sql
 -- ターミナル1で再実行
 SELECT * FROM ufo_sightings WHERE shape = 'triangle';
 ```
@@ -206,12 +210,14 @@ SELECT * FROM ufo_sightings WHERE id = 999;
 **結果: 0行（空の結果）**
 
 ```sql
--- ターミナル2でINSERT
+-- ターミナル2
 BEGIN;
 INSERT INTO ufo_sightings (id, sighting_date, location, shape, color, duration_minutes, witness_count, credibility_score)
 VALUES (999, '2024-06-01', 'New York, New York', 'disk', 'silver', 30, 20, 0.95);
 COMMIT;
+```
 
+```sql
 -- ターミナル1で再実行
 SELECT * FROM ufo_sightings WHERE id = 999;
 ```
@@ -242,11 +248,13 @@ SELECT * FROM ufo_sightings WHERE id = 1;
 ```
 
 ```sql
--- ターミナル2でDELETE
+-- ターミナル2
 BEGIN;
 DELETE FROM ufo_sightings WHERE id = 1;
 COMMIT;
+```
 
+```sql
 -- ターミナル1で再実行
 SELECT * FROM ufo_sightings WHERE id = 1;
 ```
