@@ -118,7 +118,7 @@ SELECT * FROM ufo_sightings WHERE shape = 'disk' ORDER BY sighting_date;
   7 | 2024-04-05    | Los Angeles, California   | disk  | bright-red     |               25 |            15 |              0.91  ← 幽霊UFOが出現！
 ```
 
-**✓ ファントムリード発生！**
+**👻 ファントムリード発生！**
 
 ## 実験2: 0行→1行パターン
 
@@ -153,7 +153,7 @@ SELECT * FROM ufo_sightings WHERE shape = 'unknown';
   7 | 2024-05-01    | Denver, Colorado    | unknown | flickering  |                2 |             1 |              0.30
 ```
 
-**✓ ファントムリード発生！**
+**👻 ファントムリード発生！**
 
 ## 実験3: 1行→2行パターン
 
@@ -192,7 +192,7 @@ SELECT * FROM ufo_sightings WHERE shape = 'triangle';
   8 | 2024-05-15    | Chicago, Illinois   | triangle | dark-gray |               10 |             4 |              0.67
 ```
 
-**✓ ファントムリード発生！**
+**👻 ファントムリード発生！**
 
 ## 実験4: 主キー検索でも
 
@@ -229,7 +229,7 @@ SELECT * FROM ufo_sightings WHERE id = 999;
  999 | 2024-06-01    | New York, New York   | disk  | silver |               30 |            20 |              0.95
 ```
 
-**✓ ファントムリード発生！**
+**👻 ファントムリード発生！**
 
 ## 実験5: DELETE（1行→0行）
 
@@ -261,7 +261,7 @@ SELECT * FROM ufo_sightings WHERE id = 1;
 
 **結果: 0行（UFOが消えた！）**
 
-**✓ ファントムリード発生！**
+**👻 ファントムリード発生！**
 
 ## 英語の原文を確認
 
