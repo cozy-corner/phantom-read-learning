@@ -76,8 +76,8 @@ INSERT INTO ufo_sightings (sighting_date, location, shape, color, duration_minut
 
 まずは「複数行」のパターンで検証。
 
-### ターミナル1
 ```sql
+-- ターミナル1
 BEGIN;
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 
@@ -94,16 +94,16 @@ SELECT * FROM ufo_sightings WHERE shape = 'disk' ORDER BY sighting_date;
   3 | 2024-03-22    | Phoenix, Arizona      | disk  | glowing-white  |                8 |             2 |              0.65
 ```
 
-### ターミナル2
 ```sql
+-- ターミナル2
 BEGIN;
 INSERT INTO ufo_sightings (sighting_date, location, shape, color, duration_minutes, witness_count, credibility_score)
 VALUES ('2024-04-05', 'Los Angeles, California', 'disk', 'bright-red', 25, 15, 0.91);
 COMMIT;
 ```
 
-### ターミナル1（続き）
 ```sql
+-- ターミナル1（続き）
 -- 同じクエリを再実行
 SELECT * FROM ufo_sightings WHERE shape = 'disk' ORDER BY sighting_date;
 ```
