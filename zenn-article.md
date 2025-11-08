@@ -320,6 +320,6 @@ PostgreSQL日本語ドキュメントの「複数行のある集合」という�
 
 本記事の実験環境（Docker環境、SQLファイル、ドキュメント）は以下で公開しています：
 
-https://github.com/your-username/phantom-read-learning
+https://github.com/cozy-corner/phantom-read-learning
 
 ぜひクローンして、自分の手でファントムリードを再現してみてください！
