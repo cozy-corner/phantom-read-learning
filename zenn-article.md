@@ -1,5 +1,5 @@
 ---
-title: "PostgreSQLの「複数行のある集合」を実験で検証してみた - ファントムリードの深掘り"
+title: "ファントムリードの「複数行のある集合」って何？実験して確かめてみた"
 emoji: "👻"
 type: "tech"
 topics: ["postgresql", "database", "transaction", "sql"]
